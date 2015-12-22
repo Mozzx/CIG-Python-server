@@ -1,0 +1,81 @@
+
+-----------------------------------------Hacker Rank  Library fine --------------------------------
+
+__author__ = 'mattallah'
+sty1 = input()
+sty2 = input()
+#actual return date
+d1,m1,y1 = sty1.strip().split(' ')
+d1,m1,y1 = [int(d1), int(m1),int(y1)]
+#Return date
+d2,m2,y2 = sty2.strip().split(' ')
+d2,m2,y2 = [int(d2), int(m2),int(y2)]
+fine = 0
+hackos = 0
+fine_days = 0
+print (y1)
+print (2)
+print (d1)
+print (d2)
+if y1 ==  y2:
+    if m2==m1:
+        fine_days = d2-d1
+        fine_days = abs(fine_days)
+        if fine_days>0:
+            fine = fine_days * 15
+    elif m2>m1:
+        fine_months = m2-m1
+        fine = fine_months * 500
+else:
+    fine = 1000
+print (fine)
+---------------------------------------Hcker Rank Ceaser Cipher-----------------------------------
+def encryptCaesar(s, k):
+    output = list(s)
+    for idx, l in enumerate(output):
+        if l.isalpha():
+            if l.isupper():
+                new_char = ord(l)+k
+                if new_char > ord('Z'):
+                    new_char = new_char - ord('Z') + ord('A') - 1
+                output[idx] = chr(new_char)
+            else:
+                new_char = ord(l)+k
+                if new_char > ord('z'):
+                    new_char = new_char - ord('z') + ord('a') - 1
+                output[idx] = chr(new_char)
+    return ''.join(output)
+     
+     
+if __name__ == '__main__':
+    n = input()
+    s = input()
+    k = int(input())
+    print (encryptCaesar(s, k))
+-----------------------------------------Hacker Rank   Lonly Integer-------------------------------------------
+def lonelyinteger(b):
+    from collections import Counter
+    b = list(b.strip().split(' '))
+    cnt = Counter()
+    list1 = []
+    list2 = []
+    unique = []
+    for i in b:
+        cnt[i] +=1
+    for k in cnt.keys():
+        k = int(k)
+        list1.append(k)
+    for v in cnt.values():
+        list2.append(v)
+    dict1 = dict(zip(list1,list2))
+    for key,value in dict1.items():
+        if value==1:
+            unique.append(key)
+    for i in unique:
+        print(i)
+if __name__ == '__main__':
+    n = input()
+    #s = input()
+    i = input()
+lonelyinteger(i)
+--------------------------------------Hacker Rank--------------------------------------------------------------------
