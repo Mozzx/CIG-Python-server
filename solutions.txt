@@ -1,3 +1,126 @@
+Exceptions :try:
+        a = float(input('Enter a number: '))
+except ValueError:
+        print('You entered an invalid number')
+		
+a = input('Input an integer: ')
+>>> 1.1.is_integer()
+False
+a = int(input())
+a = Fraction(input('Enter a fraction: '))
+		>>> try:
+				a = Fraction(input('Enter a fraction: '))
+		except ZeroDivisionError:
+				print('Invalid fraction')
+z = complex(input('Enter a complex number: '))
+		>>> try:
+				from fractions import Fraction
+				a = Fraction(input('Enter a fraction: '))
+		except ZeroDivisionError:
+				print('Invalid fraction')				
+---------------------------Functions ----------------
+>>> def is_factor(a, b):
+        if b % a == 0:
+            return True
+        else:
+            return False
+---------------------------------------Create a kist with n numbers---------------------------------------
+mylist = list(range(10))
+-------------------------Loop ----------
+>>> for i in range(1, 4):
+        print(i)
+1
+2
+3
+------------- Loop  step
+>>> for i in range(1,10,2):
+        print(i)
+1
+3
+5
+7
+9
+---------------
+ def factors(b):
+
+?     for i in range(1, b+1):
+           if b % i == 0:
+               print(i)
+
+   if __name__ == '__main__':
+
+       b = input('Your Number Please: ')
+       b = float(b)
+
+?     if b > 0 and b.is_integer():
+           factors(int(b))
+       else:
+           print('Please enter a positive integer')
+-----------------------------------------Format
+>>> '{0:.2f}'.format(1.25456)
+>>> '{0:.2f}'.format(1.25556)
+'1.26'
+>>> (25.5 * 2.54) / 100
+--------------Quadratic equation 
+D = (b**2 – 4*a*c)**0.5
+square root of b**2 - 4*a*c
+-------------------------
+def roots(a, b, c):
+
+    D = (b*b - 4*a*c)**0.5
+    x_1 = (-b + D)/(2*a)
+    x_2 = (-b - D)/(2*a)
+
+    print('x1: {0}'.format(x_1))
+    print('x2: {0}'.format(x_2))
+if __name__ == '__main__':
+    a = input('Enter a: ')
+    b = input('Enter b: ')
+    c = input('Enter c: ')
+-----------------------------------------------Hackerank Staircase-------------
+__author__ = 'mattallah'
+def printStaircase(num_stairs):
+    for stairs in range(1, num_stairs + 1):
+        print (' ' * (num_stairs - stairs) + '#' * stairs)
+
+
+if __name__ == '__main__':
+
+    t = int(input())
+    printStaircase(t)
+-----------------------------------------------Hacker Rank -------------------------
+
+import sys
+
+
+d1,m1,y1 = raw_input().strip().split(' ')
+d1,m1,y1 = [int(d1),int(m1),int(y1)]
+d2,m2,y2 = raw_input().strip().split(' ')
+d2,m2,y2 = [int(d2),int(m2),int(y2)]
+
+
+n = int(input().strip())
+s = input().strip()
+k = int(input().strip())
+
+
+------------------------------------------------Hacker Rank Library ------------
+str1 = input()
+
+d1 = str1.strip().split(' ')
+2 1 1201
+['2', '1', '1201']
+
+strip is a string function but not an array functions
+
+-------------------------------------------Hacker Rank code----------
+n = int(raw_input())
+for i in range(0,n):
+    a, b = raw_input().split()
+    print int(a) + int(b)
+
+-----------------------------------Hack rank solutions -----------------------------------------
+http://www.martinkysel.com/hackerrank-solutions/
 
 -----------------------------------------Hacker Rank  Library fine --------------------------------
 
@@ -29,6 +152,10 @@ if y1 ==  y2:
 else:
     fine = 1000
 print (fine)
+------------------------------Lambda Expression------------
+def make_incrementor (n): return lambda x: x + n
+print (make_incrementor(22)(33))  #55
+
 ---------------------------------------Hcker Rank Ceaser Cipher-----------------------------------
 def encryptCaesar(s, k):
     output = list(s)
@@ -78,4 +205,15 @@ if __name__ == '__main__':
     #s = input()
     i = input()
 lonelyinteger(i)
---------------------------------------Hacker Rank--------------------------------------------------------------------
+--------------------------------------Hacker Rank  Filpping Integers--------------------------------------------------------------------
+#!/usr/bin/py
+def flipBits(a):
+   return a ^ 4294967295 # 2^32 - 1
+ 
+if __name__ == '__main__':
+    n = int(input())
+    for i in range(0,n):
+        a = int(input())
+        res = flipBits(a)
+        print (res)
+------------------------------------------Hacker Rank -------------------------------------------------------
