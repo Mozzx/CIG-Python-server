@@ -156,6 +156,53 @@ print (fine)
 def make_incrementor (n): return lambda x: x + n
 print (make_incrementor(22)(33))  #55
 
+Find the prime numbers within a list using filter and lambda expression
+
+>>> nums = range(2, 50) 
+>>> for i in range(2, 8): 
+...     nums = filter(lambda x: x == i or x % i, nums)
+... 
+>>> print nums
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+=================Filter
+mult3 = filter(lambda x: x % 3 == 0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+
+
+-----------------------------------Lambda with map------------------------------------
+>>> sentence = 'It is raining cats and dogs'
+>>> words = sentence.split()
+>>> print words
+['It', 'is', 'raining', 'cats', 'and', 'dogs']
+>>> 
+>>> lengths = map(lambda word: len(word), words)
+>>> print lengths
+[2, 2, 7, 4, 3, 4]
+
+----------------------------Map ----------------------
+def sum(x):
+    return (x+1)
+temp = [1,2,3,4,5]
+
+f = list(map(sum, temp))
+print(f)
+
+-----------------------------------------------------------Lambda With commands for linux----------
+>>> import commands
+>>> 
+>>> mount = commands.getoutput('mount -v')
+>>> lines = mount.splitlines()
+>>> points = map(lambda line: line.split()[2], lines)
+>>> 
+>>> print points
+['/', '/var', '/usr', '/usr/local', '/tmp', '/proc']
+
+===============This is equivlant to ===============
+>>> lines = commands.getoutput('mount -v').splitlines()
+>>> 
+>>> points = [line.split()[2] for line in lines]
+>>> print points
+
 ---------------------------------------Hcker Rank Ceaser Cipher-----------------------------------
 def encryptCaesar(s, k):
     output = list(s)
@@ -216,4 +263,17 @@ if __name__ == '__main__':
         a = int(input())
         res = flipBits(a)
         print (res)
-------------------------------------------Hacker Rank -------------------------------------------------------
+------------------------------------------Hacker Rank Time Conversion-------------------------------------------------------
+#!/bin/python3
+
+if __name__ == '__main__':
+    t = input().strip()
+    identify = t[8:]
+    minut_sec = t[3:8]
+    hours = int(t[:2])
+    if identify=='PM':
+        hours = 12 + hours
+        final = str(hours) + ':'+ minut_sec
+    print (final)
+----------------------------------------Hacker rank----------------------------------------------------------------------------------
+
