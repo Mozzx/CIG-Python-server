@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5: A demo</title>
+<style type="text/css">
+	body {
+		font-family: tacoma, sans-serif;	
+	}
+	h1 {
+		padding: 1%;
+	} 
+	code, div {
+		clear: both;
+		margin: 1%;
+	}	
+	figure{
+		margin: 0;		
+		padding: 0px;
+		padding-bottom: 2em;
+	}
+	article h2{		
+		text-align:center;
+		color: rgb(100,100,130);
+	}
+	article {		
+		font: bold 1.1em "arial";
+		float: left;
+		margin: 1%;
+		padding: .5%;
+		width: 28%; 
+		border: .35em dotted rgb(100,0,110);
+		background-color: rgb(200,200,230);
+	}
+	.code {
+		font-family: monospace;
+	}
+	a {
+		text-decoration: none; 
+	}
+	nav {
+		margin: 1%;
+		
+	}
+	
+	nav a {
+		border-radius: 20px;
+		padding: .5%;
+		font: 1.25em "arial" bold; /* short-hand notation! */ 		
+		background-color: hsla(240,50%,50%,.5);
+		color: hsla(240,50%,10%,.5);
+		border-radius: 2%;
+	}
+	
+	nav a:hover {
+		background-color: hsla(240,50%,70%,.5);
+	}
+</style>
+
+</head>
+
+<body>
+
+<h1>HTML5: A demo</h1>
+
+
+<nav title="Navigation in Lists: To Be or Not To Be">
+	<a href="#figure">Figure &amp; Figcaption</a>
+	<a href="#svg">Inline SVG</a>
+	<a href="#video">Embedding video clips</a>
+	<a href="#audio">Embedding audio clips</a>
+	<a href="#refs">References &amp; links to check out</a>
+</nav>
+
+
+<section id="body">		
+<article id="figure">	 
+	<h2>Use of the <span class="code">figure + figcaption</span> tags</h2>
+	<figure>
+	  <img width="350" src="IMG_3101.jpg" alt="One early morning."   >
+	  <figcaption>One early morning.</figcaption>
+	</figure>
+
+	<figure>
+	  <img width="350" src="IMG_3095.jpg" alt="One late afternoon."   >
+	  <figcaption>One late afternoon.</figcaption>
+	</figure>
+
+</article>
+<article id="svg"> 
+
+	<h2>Examples of embedding inline SVG graphics</h2>
+
+	<figure>
+	<svg width="100" height="100">
+	  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="3" fill="blue" />  
+	  
+	</svg>
+	<figcaption>My first inline SVG.</figcaption>
+	</figure>
+
+	<figure>
+	<svg height="100%"  id="logo">
+	  <defs>
+		<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+		  <stop offset="0%"   style="stop-color:rgb(55,255,0);" />
+		  <stop offset="100%" style="stop-color:rgb(55,0,0);"   />
+		</linearGradient>
+	  </defs>  
+	  
+	  <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+	  <text fill="#ffffff" font-size="25" font-family="arial" x="30" y="86">HTML5 demo</text>
+	  
+	</svg>
+
+	<figcaption>My second inline SVG with embedded SVG style definitions.</figcaption>
+	</figure>
+
+	<figure >
+	<svg xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink">
+
+		<g>
+		<rect x="10" y="10" height="80" width="110"
+			 style=" fill: #0000aa">  
+			
+		</rect>
+	  <text fill="#ffffff" font-size="25" font-family="arial" x="30" y="86">HTML5</text>
+	  <animateTransform
+				attributeName="transform"
+				begin="0s"
+				dur="20s"
+				type="rotate"
+				from="0 60 60"
+				to="360 60 60"
+				repeatCount="indefinite"
+			/>
+			</g>
+	</svg>
+	<figcaption>My third inline SVG with animation.</figcaption>
+	</figure>
+
+
+</article>
+
+
+
+<article id="video" > 
+	<h2   >Video</h2>
+	<figure>
+	<object 
+	 width="350" data="http://www.w3schools.com/tags/helloworld.swf">	 
+		Your browser does not support Flash. 
+	</object>
+	<figcaption>A Flash animation, courtesy of W3Schools</figcaption>
+	</figure>
+
+	<div>
+	<p>Here's an example of youtube clip embedded using <span class="code">iframe</span>:
+	<iframe height="315"  width="350" src="http://www.youtube.com/embed/W7qWa52k-nE"  allowfullscreen></iframe>
+	</div>
+
+	<div>
+	<p>Here's an example of an embedded video clip embedded using <span class="code">video</span> with the <span class="code">autoplay</span> attribute set on:
+	<figure>
+	<video width="350" controls autoplay preload="metadata">
+	  <source src="mov_bbb.mp4" type="video/mp4">  
+	  Your browser does not support HTML5 video.
+	</video>
+	<figcaption>Video courtesy of  <a href="http://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</figcaption>
+	</figure>
+	</div>
+
+
+	<!-- video controls width="420" height="315">
+	<source src="Unit6-Part1.wmv" type="video/wmv">
+	</video -->
+
+	<!-- source src="fotolia_86646510.flv" type="video/flv" -->
+
+</article>
+
+
+
+<article id="audio"> 
+	<h2 >Audio</h2>
+	<div>
+	<p>Linking audio clip without controls can be done as a link; e.g.: here is an <a  title="This is a brief explanation on monochrome."	href="monochrome.mp3" 	type="audio/mp3">audio clip</a> of a brief intro on monochrome taken from the <a href="https://en.wikipedia.org/wiki/Monochrome">wikipedia</a> using the <a href="http://www.fromtexttospeech.com/">text-to-speech online tool</a>.</p>
+
+	<p>Alternatively, you can embed the audio clip directly onto the webpage like this:
+	</p>
+	<p>
+	<audio controls>
+	<source src="monochrome.mp3" type="audio/mp3">  
+	Your browser does not support the audio element.
+	</audio>
+	</p>
+	</div>
+</article> 
+
+<article id="refs"> 
+	<h2 >Other links and references</h2>
+	<ul>
+	<li><a href="http://iconmonstr.com/">Free SVG icons</a></li>
+	<li><a href="http://www.cssplay.co.uk">CSS play</a></li>
+	<li><a href="http://tutorials.jenkov.com/svg/index.html">SVG: other cool features</a></li>
+	</ul>
+	
+	<h2 >Licence-free video/audio clips</h2>
+	
+	
+	<ul>
+	<li><a href="https://us.fotolia.com">Fotolia</a></li>
+	<li><a href="http://www.shutterstock.com/">Shutterstock</a></li>
+	<li><a href="http://www.pond5.com/free">Pond5</a></li>
+	<li><a href="https://www.youtube.com/audiolibrary/music">Youtube Audio Library</a></li>
+	<li><a href="http://www.fromtexttospeech.com/">Text-to-speech mp3 creator</a></li>
+	</ul>
+
+
+</article> 
+
+</section>
+
+</body>
+</html>

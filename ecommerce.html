@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hello To Your Favourite Shoe Store</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<form action="/cgi-bin/purchase.py" method="post">
+    <fieldset>
+        <legend>Your Personal Information</legend>
+    <label for="sal" class="field">Salutation</label>
+    <p></p><select size="1" style="width: 100px;">
+  <option value="Mr">Mr</option>
+  <option value="Miss">Miss</option>
+  <option value="Mrs">Mrs</option>
+  <option value="Dr">Dr</option>
+</select></p>
+    <p><label for="name" class="field">Name</label>
+    <input type="text" name="name" placeholder="Your Name" required/></p>
+        <p><label for="Tel" class="field">Phone</label>
+    <input type="tel" name="tel" placeholder="Telephone" required/></p>
+   <p><label for="Email" class="field">Email</label>
+    <input type="email" name="email" placeholder="Email" required/></p>
+    <p>Your Delivery take 2 weeks from ordering</p>
+    </fieldset>
+        <div class="row column text-center">
+<h2>Our Newest Products</h2>
+<hr>
+</div>
+<div class="row small-up-2 large-up-4">
+<div class="column">
+<img class="thumbnail" src="images/1.jpg" alt="#">
+<h5>Shoes Number One</h5>
+<p>$400</p>
+<input type="number" name="one"class="myText"/><a href="#" class="button expanded">Buy</a>
+</div>
+<div class="column">
+<img class="thumbnail" src="images/2.jpg" alt="#">
+<h5>Shoes Number Two</h5>
+<p>$400</p>
+<input type="number" name="two" class="myText" min="0" max="100"/><a href="#" class="button expanded">Buy</a>
+</div>
+<div class="column">
+<img class="thumbnail" src="images/3.jpg" alt="#">
+<h5>Shoes Number Three</h5>
+<p>$400</p>
+<input type="number" name="three" class="myText" min="0" max="100"/><a href="#" class="button expanded">Buy</a>
+</div>
+<div class="column">
+<img class="thumbnail" src="images/4.jpg" alt="#">
+<h5>Shoes Number Four</h5>
+<p>$400</p>
+<input type="number" name="four" class="myText" min="0" max="100"/><a href="#" class="button expanded">Buy</a>
+</div>
+</div>
+<div class="row small-up-2 medium-up-3 large-up-6">
+<div class="column">
+<img class="thumbnail" src="images/5.jpg" alt="#">
+<h5>Shoes Number Five</h5>
+<p>$400</p>
+<input type="number" name="five" class="myText" min="0" max="100"/><a href="#" class="button small expanded hollow">Buy</a>
+</div>
+<div class="column">
+<img class="thumbnail" src="images/6.jpg" alt="#">
+<h5>Shoes Number Six</h5>
+<p>$400</p>
+<input type="number" name="six" class="myText" min="0" max="100"/><a href="#" class="button small expanded hollow">Buy</a>
+</div>
+<div class="column">
+<img class="thumbnail" src="images/7.jpg" alt="#">
+<h5>Shoes Number Seven</h5>
+<p>$400</p>
+<input type="number" name="seven" class="myText" min="0" max="100"/><a href="#" class="button small expanded hollow" >Buy</a>
+</div>
+<div class="column">
+<img class="thumbnail" src="images/8.jpg" alt="#">
+<h5>Shoes Number Eight</h5>
+<p>$400</p>
+<input type="number" name="eight" class="myText" min="0" max="100"/><a href="#" class="button small expanded hollow" >Buy</a>
+</div>
+</div>
+    <input type="submit" name="submit" class="myButton"/>
+</form>
+
+</body>
+</html>

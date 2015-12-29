@@ -1,0 +1,26 @@
+table {
+border: green 2px;
+font-size: 16pt;
+font-family: Impact;
+text-align: center;
+}
+
+tr {6
+text-align: left;
+background-color: #81db81;
+color: green;
+padding: 1em;}
+
+th {
+text-align: center;
+padding: 1em;
+width: 180px;
+background-color: #81db81;
+color: black;}
+
+td {
+text-align: left;
+padding: 1em;
+width: 180px;
+background-color: #81db81;
+color: black;}
